@@ -10,7 +10,7 @@ motoImg.src = 'https://can-am.brp.com/content/dam/global/en/can-am-off-road/my24
 
 // Carregar a imagem da viatura da polícia
 const viaturaImg = new Image()
-viaturaImg.src = 'https://i.pinimg.com/550x/69/e7/83/69e783cb3093100a417b6287956dad4e.jpg'  // Substitua com o caminho ou URL para a imagem da viatura
+viaturaImg.src = 'https://static.vecteezy.com/system/resources/thumbnails/035/858/067/small/police-car-side-view-png.png'  // Substitua com o caminho ou URL para a imagem da viatura
 
 // Carregar a imagem de fundo
 const fundoImg = new Image()
@@ -53,7 +53,7 @@ function atualizarPersonagem(){
 const obstaculo = {
     x: canvas.width - 100,  // Ajuste a posição inicial da viatura
     y: canvas.height - 120,  // Ajuste a posição vertical da viatura
-    largura: 70,  // Largura da viatura
+    largura: 90,  // Largura da viatura
     altura: 50,  // Altura da viatura
     velocidadex: 7
 }
@@ -83,7 +83,7 @@ function detectarColisao(){
         personagem.y < obstaculo.y + obstaculo.altura &&
         personagem.y + personagem.altura > obstaculo.y
     ) {
-        console.log("GAME OVER")
+        console.log("Perdeu Playboy")
         gameOver = true
     }
 }
@@ -91,7 +91,7 @@ function detectarColisao(){
 function desenharGameOver(){
     ctx.fillStyle = 'red'
     ctx.font = '50px Arial'
-    ctx.fillText('GAME OVER', canvas.width / 2 - 150, canvas.height / 2)
+    ctx.fillText('Perdeu Playboy', canvas.width / 2 - 150, canvas.height / 2)
 }
 
 function desenharPontuacao(){
